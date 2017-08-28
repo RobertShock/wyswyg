@@ -1,0 +1,60 @@
+h1 {
+	text-align: center;
+	text-shadow: 2px 2px 3px red;
+	color: black;
+	font-size: 2em;
+}
+
+#myContainer {
+  list-style: block;
+}
+
+.president:nth-child(even) {
+  background-color: lightyellow;   
+}
+
+.president:nth-child(odd) {
+  background-color: lightblue;
+}
+
+
+.name {
+	text-align: center;
+	font-family: "Trebuchet MS";
+  color: black;
+  text-shadow: 2px 2px 3px red;
+}
+.bio {
+	text-align: center;
+}
+
+#presidentContainer {
+  background-color: darkgray;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 15px 15px;
+
+}
+
+.president {
+  margin: 1em;
+  text-align: center; 
+  background-color: lightgray;
+  padding: 15px 20px 20px 20px; 
+  width: 25%;
+  border: 3px solid #0C1726;
+}
+
+.bio {
+  padding: 0 1em;
+}
+
+img {
+  min-width: 199px;
+  max-width: 200px;
+  min-height: 199px;
+  max-height: 200px;
+}
+
+
