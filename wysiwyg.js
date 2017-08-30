@@ -29,6 +29,7 @@ presidentArray.push(president2);
 presidentArray.push(president3);
 
 let presidentContainer = document.getElementById("presidentContainer");
+let textInput = document.getElementById("textInput");
 
 function buildPresidentPage(president) {
 	let presidentCard = "";
@@ -72,15 +73,16 @@ for (let i = 0; i < presidentContainer.childNodes.length; i++) {
 };
 
 function changeBorder(e) {
- if (e.target.classList.contains('presidentContainer')) {
+ if (e.target.classList.contains('president')) {
     selectedPresident = e.target;
-  } else if (e.target.classList.contains('child')) {
-    selectedPerson = e.target.parentNode;
-  } else if (e.target.classList.contains('grandChild')) {
+  } else if (e.target.parentNode.classList.contains('president')) {
+    selectedPresident = e.target.parentNode;
+  } else if (e.target.parentNode.parentNode.classList.contains('president')) {
     selectedPresident = e.target.parentNode.parentNode;
-  } else if (e.target.classList.contains('childOfGrandChild')) {
+  } else if (e.target.parentNode.parentNode.parentNode.classList.contains('president')) {
     selectedPresident = e.target.parentNode.parentNode.parentNode; 
   };
+  console.log("selectedPresident", selectedPresident);
   selectedPresident.classList.add('dottedBorder'); 
 };
 
@@ -91,7 +93,9 @@ function replaceBio() {
 		if (e.key === 'Enter') {
   		textInput.value = '';
 		} else {
-		let currentBio = selectedPresident.childNodes[0].childNodes[1].innerHTML = textInput.value;
+		var currentBio = selectedPresident.childNodes[1].childNodes[0]; 
+    console.log("currentBio", currentBio);
+    currentBio.innerHTML = textInput.value;
 		};
 	});
 };

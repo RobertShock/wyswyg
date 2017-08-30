@@ -17,7 +17,6 @@ h1 {
   background-color: lightblue;
 }
 
-
 .name {
 	text-align: center;
 	font-family: "Trebuchet MS";
@@ -34,7 +33,6 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   padding: 15px 15px;
-
 }
 
 .president {
@@ -48,6 +46,10 @@ h1 {
 
 .bio {
   padding: 0 1em;
+}
+
+.dottedBorder{
+  border: 14px dotted hotpink;
 }
 
 img {
